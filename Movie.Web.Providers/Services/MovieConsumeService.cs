@@ -27,15 +27,6 @@ namespace Movie.Web.Providers.Services
         {
             try
             {
-
-                //var response = await _httpClient.PostAsJsonAsync<AddMovieViewModle>("api/Movie/AddMovie", addMovieViewModle);
-
-                //var content = await response.Content.ReadAsStringAsync();
-                //var model  = JsonSerializer.Deserialize<AddMovieViewModle>(content);
-                _httpClient.DefaultRequestHeaders.Add("application-type", "REST");
-                //var newJsonObj = JsonConvert.SerializeObject(addMovieViewModle);
-                //StringContent stringContent=new StringContent(newJsonObj,System.Text.Encoding.UTF8,"application/json");
-                //var response = await _httpClient.PostAsync("api/Movie/AddMovie", stringContent);
                 var response = await _httpClient.PostAsJsonAsync<AddMovieViewModle>("api/Movie/AddMovie", addMovieViewModle);
                 return addMovieViewModle;
             }
