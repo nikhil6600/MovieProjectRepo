@@ -1,0 +1,12 @@
+﻿@model MovieViewModel
+
+
+@foreach (var movies in Model.searchMovie)
+{
+    <div class="card m-3" style="min-width:18rem; max-width:30.5%;">
+        <div class="card-header">
+            <h3>@movies.MovieTitle</h3>
+        </div>
+        <img src="@movies.PhotoPath" class="card-img-top img-thumbnail">
+    </div>
+}    
